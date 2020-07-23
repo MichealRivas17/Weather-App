@@ -1,1 +1,1 @@
-# javaScript Practice #2: Weather-App
+# javaScript Practice #2: Weather App
