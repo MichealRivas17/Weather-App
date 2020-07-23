@@ -15,7 +15,7 @@ weather.temperature = {
 
 const KELVIN = 273;
 //API KEY
-const key = '9f9187032f2e1a34505cc8c4c316acc0';
+const key = "9f9187032f2e1a34505cc8c4c316acc0";
 
 //check  if browser supports geolocation
 
@@ -39,13 +39,13 @@ function setPosition(position) {
 
 function showError(error){
     notificationElement.style.display = "block";
-    notificationElement.innerHTML = '<p> ${error.message} </p>';   
+    notificationElement.innerHTML = `<p> ${error.message} </p>`;   
 }
 
 // GET WEATHER NFROM API PROVIDER
 
 function getWeather(latitude, longitude){
-    let api = 'http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}';
+    let api = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
 
     fetch(api)
         .then(function(response) {
@@ -67,10 +67,10 @@ function getWeather(latitude, longitude){
 // DISPLAY WEATHER TO UI
 
 function displayWeather(){
-    iconElement.innerHTML = '<img src="icons/${weather.iconId}.png"/>';
-    tempElement.innerHTML = '${weather.temperature.value}°<span>C</span>';
+    iconElement.innerHTML = `<img src="icons/${weather.iconId}.png"/>`;
+    tempElement.innerHTML = `${weather.temperature.value}°<span>C</span>`;
     descElement.innerHTML = weather.description;
-    locationElement.innerHTML = '${weather.city}, ${weather.country}';
+    locationElement.innerHTML = `${weather.city}, ${weather.country}`;
 }
 
 //C TO F conversion
