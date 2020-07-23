@@ -75,7 +75,7 @@ function displayWeather(){
 
 //C TO F conversion
 
-function celsiusToFarenheit(temperature){
+function celsiusToFahrenheit(temperature){
     return (temperature * 9/5) + 32;
 }
 
